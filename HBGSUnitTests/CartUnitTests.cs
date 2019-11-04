@@ -1,4 +1,3 @@
-using System;
 using Xunit;
 
 namespace HBGSUnitTests
@@ -6,8 +5,11 @@ namespace HBGSUnitTests
     public class CartUnitTests
     {
         [Fact]
-        public void Test1()
+        public void AddToCartPass()
         {
+            //Arrange
+            //Act
+            //Assert
         }
     }
 }
