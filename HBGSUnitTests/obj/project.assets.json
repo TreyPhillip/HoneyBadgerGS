@@ -3538,7 +3538,10 @@
         },
         "runtime": {
           "bin/placeholder/HoneyBadgersGS.dll": {}
-        }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       }
     }
   },
@@ -6145,12 +6148,11 @@
       ]
     },
     "System.Collections.NonGeneric/4.3.0": {
-      "sha512": "prtjIEMhGUnQq6RnPEYLpFt8AtLbp9yq2zxOSrY7KJJZrw25Fi97IzBqY7iqssbM61Ek5b8f3MG/sG1N2sN5KA==",
+      "sha512": "LE/oChpRvkSi3U25u0KnJcI44JeDZ1QJCyN4qFDx2uusEypdqR24w7lKYw21eYe5esuCBuc862wRmpF63Yy1KQ==",
       "type": "package",
       "path": "system.collections.nongeneric/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -6480,12 +6482,11 @@
       ]
     },
     "System.ComponentModel.TypeConverter/4.3.0": {
-      "sha512": "16pQ6P+EdhcXzPiEK4kbA953Fu0MNG2ovxTZU81/qsCd1zPRsKc3uif5NgvllCY598k6bI0KUyKW8fanlfaDQg==",
+      "sha512": "HZiP0DwTHJ+C+rdFqP47nBYUh5283kcwXIGY2zOVVhsJmVI/2tYiX2zNRdjRQRHsTox58Ydkec6h0pWSh8wAsw==",
       "type": "package",
       "path": "system.componentmodel.typeconverter/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -10606,35 +10607,37 @@
     ]
   },
   "packageFolders": {
-    "/home/nathan/.nuget/packages/": {},
-    "/usr/share/dotnet/sdk/NuGetFallbackFolder": {}
+    "C:\\Users\\Nathan\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/nathan/CodeProjects/HoneyBadgerGS/HBGSUnitTests/HBGSUnitTests.csproj",
+      "projectUniqueName": "C:\\Users\\Nathan\\CodeProjects\\HoneyBadgerGS\\HBGSUnitTests\\HBGSUnitTests.csproj",
       "projectName": "HBGSUnitTests",
-      "projectPath": "/home/nathan/CodeProjects/HoneyBadgerGS/HBGSUnitTests/HBGSUnitTests.csproj",
-      "packagesPath": "/home/nathan/.nuget/packages/",
-      "outputPath": "/home/nathan/CodeProjects/HoneyBadgerGS/HBGSUnitTests/obj/",
+      "projectPath": "C:\\Users\\Nathan\\CodeProjects\\HoneyBadgerGS\\HBGSUnitTests\\HBGSUnitTests.csproj",
+      "packagesPath": "C:\\Users\\Nathan\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Nathan\\CodeProjects\\HoneyBadgerGS\\HBGSUnitTests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "/usr/share/dotnet/sdk/NuGetFallbackFolder"
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/home/nathan/.config/NuGet/NuGet.Config"
+        "C:\\Users\\Nathan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp3.0": {
           "projectReferences": {
-            "/home/nathan/CodeProjects/HoneyBadgerGS/HoneyBadgersGS/HoneyBadgersGS.csproj": {
-              "projectPath": "/home/nathan/CodeProjects/HoneyBadgerGS/HoneyBadgersGS/HoneyBadgersGS.csproj"
+            "C:\\Users\\Nathan\\CodeProjects\\HoneyBadgerGS\\HoneyBadgersGS\\HoneyBadgersGS.csproj": {
+              "projectPath": "C:\\Users\\Nathan\\CodeProjects\\HoneyBadgerGS\\HoneyBadgersGS\\HoneyBadgersGS.csproj"
             }
           }
         }
@@ -10674,7 +10677,16 @@
           "net48"
         ],
         "assetTargetFallback": true,
-        "warn": true
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.AspNetCore.App": {
+            "privateAssets": "none"
+          },
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

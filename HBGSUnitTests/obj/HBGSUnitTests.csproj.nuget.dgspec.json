@@ -1,35 +1,37 @@
 {
   "format": 1,
   "restore": {
-    "/home/nathan/CodeProjects/HoneyBadgerGS/HBGSUnitTests/HBGSUnitTests.csproj": {}
+    "C:\\Users\\Nathan\\CodeProjects\\HoneyBadgerGS\\HBGSUnitTests\\HBGSUnitTests.csproj": {}
   },
   "projects": {
-    "/home/nathan/CodeProjects/HoneyBadgerGS/HBGSUnitTests/HBGSUnitTests.csproj": {
+    "C:\\Users\\Nathan\\CodeProjects\\HoneyBadgerGS\\HBGSUnitTests\\HBGSUnitTests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/nathan/CodeProjects/HoneyBadgerGS/HBGSUnitTests/HBGSUnitTests.csproj",
+        "projectUniqueName": "C:\\Users\\Nathan\\CodeProjects\\HoneyBadgerGS\\HBGSUnitTests\\HBGSUnitTests.csproj",
         "projectName": "HBGSUnitTests",
-        "projectPath": "/home/nathan/CodeProjects/HoneyBadgerGS/HBGSUnitTests/HBGSUnitTests.csproj",
-        "packagesPath": "/home/nathan/.nuget/packages/",
-        "outputPath": "/home/nathan/CodeProjects/HoneyBadgerGS/HBGSUnitTests/obj/",
+        "projectPath": "C:\\Users\\Nathan\\CodeProjects\\HoneyBadgerGS\\HBGSUnitTests\\HBGSUnitTests.csproj",
+        "packagesPath": "C:\\Users\\Nathan\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Nathan\\CodeProjects\\HoneyBadgerGS\\HBGSUnitTests\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "/usr/share/dotnet/sdk/NuGetFallbackFolder"
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "/home/nathan/.config/NuGet/NuGet.Config"
+          "C:\\Users\\Nathan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.0": {
             "projectReferences": {
-              "/home/nathan/CodeProjects/HoneyBadgerGS/HoneyBadgersGS/HoneyBadgersGS.csproj": {
-                "projectPath": "/home/nathan/CodeProjects/HoneyBadgerGS/HoneyBadgersGS/HoneyBadgersGS.csproj"
+              "C:\\Users\\Nathan\\CodeProjects\\HoneyBadgerGS\\HoneyBadgersGS\\HoneyBadgersGS.csproj": {
+                "projectPath": "C:\\Users\\Nathan\\CodeProjects\\HoneyBadgerGS\\HoneyBadgersGS\\HoneyBadgersGS.csproj"
               }
             }
           }
@@ -69,29 +71,40 @@
             "net48"
           ],
           "assetTargetFallback": true,
-          "warn": true
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/home/nathan/CodeProjects/HoneyBadgerGS/HoneyBadgersGS/HoneyBadgersGS.csproj": {
+    "C:\\Users\\Nathan\\CodeProjects\\HoneyBadgerGS\\HoneyBadgersGS\\HoneyBadgersGS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/nathan/CodeProjects/HoneyBadgerGS/HoneyBadgersGS/HoneyBadgersGS.csproj",
+        "projectUniqueName": "C:\\Users\\Nathan\\CodeProjects\\HoneyBadgerGS\\HoneyBadgersGS\\HoneyBadgersGS.csproj",
         "projectName": "HoneyBadgersGS",
-        "projectPath": "/home/nathan/CodeProjects/HoneyBadgerGS/HoneyBadgersGS/HoneyBadgersGS.csproj",
-        "packagesPath": "/home/nathan/.nuget/packages/",
-        "outputPath": "/home/nathan/CodeProjects/HoneyBadgerGS/HoneyBadgersGS/obj/",
+        "projectPath": "C:\\Users\\Nathan\\CodeProjects\\HoneyBadgerGS\\HoneyBadgersGS\\HoneyBadgersGS.csproj",
+        "packagesPath": "C:\\Users\\Nathan\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Nathan\\CodeProjects\\HoneyBadgerGS\\HoneyBadgersGS\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "/usr/share/dotnet/sdk/NuGetFallbackFolder"
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "/home/nathan/.config/NuGet/NuGet.Config"
+          "C:\\Users\\Nathan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -168,7 +181,16 @@
             "net48"
           ],
           "assetTargetFallback": true,
-          "warn": true
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
