@@ -6,7 +6,6 @@
 # testing
 /coverage
 /obj
-
 # production
 /build
 
