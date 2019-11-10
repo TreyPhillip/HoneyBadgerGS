@@ -1,4 +1,5 @@
 ﻿import React, { Component } from 'react';
+import { PopUp } from './addToCartPopUp';
 import './gameDetail.css';
 
 export class GameDetails extends Component{
@@ -18,7 +19,7 @@ export class GameDetails extends Component{
     componentDidMount() {
 
         let gameId = this.props.location.pathname.split('/').pop();
-        fetch("https://localhost:44307/api/games/getgames/" + gameId)
+        fetch("https://localhost:5001/api/games/getgames/" + gameId)
             .then(response => response.json())
             .then(data => this.setState({ gameDetails: data }));
         console.log(gameId);
@@ -32,7 +33,7 @@ export class GameDetails extends Component{
                     <img className='card-img-top' alt='game image' src={this.state.gameDetails.gameArtUrl}></img>
                     <p className="game-price">${this.state.gameDetails.price}</p>
                     <button className="btn_AddCart" onClick={() => { addElementToCart(this.state.gameDetails) }}>Add To Cart</button>
-                    <button className="btn_AddWish">Add To WishList</button>
+                    <button className="btn_AddWish" onClick={() => { addElementToWishlist(this.state.gameDetails) }}>Add To WishList</button>
                 </div>
 
                 <div className="description">  
@@ -67,5 +68,31 @@ function addElementToCart(stuff) {
     cartItems.push(item);
     //save the cart element to local storage where it can be extracted later
     sessionStorage.setItem("cart", JSON.stringify(cartItems));
+    return alert("Item has been added to the cart");
+}
+
+function addElementToWishlist(stuff) {
+    //create the cart item 
+    let wishlist = [];
+    var item = {
+        itemID: stuff.gameId,
+        itemImage: stuff.gameArtUrl,
+        itemName: stuff.gameName,
+        price: stuff.price
+    };
+
+    if (sessionStorage.getItem('wishlist')) {
+        wishlist = JSON.parse(sessionStorage.getItem('wishlist'));
+
+        for (var i = 0; i < wishlist.length; i++) {
+            if (wishlist[i].itemID == stuff.gameId) {
+                alert("You already added this item on the list, please do modify your Wishlist!");
+            }
+        }
+    }
+    //add the current item onto the cart list.
+    wishlist.push(item);
+    //save the cart element to local storage where it can be extracted later
+    sessionStorage.setItem("wishlist", JSON.stringify(wishlist));
 }
 
