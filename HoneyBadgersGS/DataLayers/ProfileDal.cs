@@ -18,22 +18,27 @@ namespace HoneyBadgers._0.DataLayers
         {
             return _db.Profile.ToList();
         }
-
         public bool Add(Profile profile)
         {
             _db.Profile.Add(profile);
             _db.SaveChangesAsync();
             return true;
         }
-        public int Update(Profile profile)
+        public bool Update(Profile profile)
         {
             _db.Profile.Update(profile);
             _db.SaveChangesAsync();
-            return 1;
+            return true;
         }
         public Profile GetData(string id)
         {
             Profile profile = _db.Profile.Find(id);
+
+			//if the object is null, just return an empty object
+			if(profile == null)
+			{
+				profile = new Profile();
+			}
             return profile;
         }
 

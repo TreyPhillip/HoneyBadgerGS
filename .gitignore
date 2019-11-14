@@ -10,4 +10,8 @@ HoneyBadgerGS_3.0/
 /HoneyBadgers_3.0/obj/Debug/netcoreapp3.0
 /HBGSUnitTests/obj/Release/netcoreapp3.0
 /HBGSUnitTests/obj/Debug/netcoreapp3.0
+<<<<<<< HEAD
 HBGSUnitTests/obj/Debug/netcoreapp3.0/HBGSUnitTests.assets.cache
+=======
+HBGSUnitTests/obj/Debug/netcoreapp3.0/HBGSUnitTests.assets.cache
+>>>>>>> Sprint-3

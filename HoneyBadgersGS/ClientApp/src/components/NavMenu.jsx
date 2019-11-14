@@ -29,7 +29,7 @@ export class NavMenu extends Component {
         <Navbar className="navbar-expand-sm navbar-toggleable-sm box-shadow mb-3" light>
           <Container>
                     <NavbarBrand tag={Link} to="/"><img src={Logo} className="honeyBadgerLogo" alt="Honey Badger Logo"></img></NavbarBrand>
-                    <form inline>
+                    <form>
                         <input className="storeSearch mr-sm-2" type="text" placeholder="Search"></input>
                     </form>
             <NavbarToggler id="hamburger" onClick={this.toggleNavbar} className="mr-2"  />
@@ -40,6 +40,9 @@ export class NavMenu extends Component {
                 </NavItem>
                 <NavItem>
                     <NavLink tag={Link} className="text-light" to='/Cart'>Cart</NavLink>
+                </NavItem>
+                <NavItem>
+                <NavLink tag={Link} className="text-light" to='/Wishlist'>Wishlist</NavLink>
                 </NavItem>
                 <NavItem>
                     <NavLink tag={Link} className="text-light" to='/Events'>Events</NavLink> 
