@@ -18,27 +18,33 @@ namespace HoneyBadgers._0.DataLayers
             return _db.FriendList.ToList();
         }
 
-        public int Add(FriendList friendList)
+        public bool Add(FriendList friendList)
         {
             _db.FriendList.Add(friendList);
             _db.SaveChangesAsync();
-            return 1;
+            return true;
         }
 
-        public int Update(FriendList friendList)
+        public bool Update(FriendList friendList)
         {
             _db.FriendList.Update(friendList);
             _db.SaveChangesAsync();
-            return 1;
+            return true;
         }
 
-        public FriendList GetData(int id)
+        public FriendList GetData(string id)
         {
             FriendList friendList = _db.FriendList.Find(id);
+
+			//if the object is null, just return an empty object
+			if(friendList == null)
+			{
+				friendList = new FriendList();
+			}
             return friendList;
         }
 
-        public int Delete(int id)
+        public int Delete(string id)
         {
             FriendList friendList = _db.FriendList.Find(id);
             _db.FriendList.Remove(friendList);

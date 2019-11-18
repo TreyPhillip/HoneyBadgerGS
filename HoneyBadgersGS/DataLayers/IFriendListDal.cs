@@ -6,9 +6,9 @@ namespace HoneyBadgers._0.DataLayers
     public interface IFriendListDal
     {
         IEnumerable<FriendList> GetAll();
-        int Add(FriendList friend);
-        int Update(FriendList friend);
-        FriendList GetData(int id);
-        int Delete(int id);
+        bool Add(FriendList friend);
+        bool Update(FriendList friend);
+        FriendList GetData(string id);
+        int Delete(string id);
     }
 }
