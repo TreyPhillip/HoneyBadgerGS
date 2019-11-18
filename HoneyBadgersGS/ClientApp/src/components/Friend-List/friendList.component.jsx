@@ -1,5 +1,6 @@
 ﻿import React, { Component } from 'react';
 import './friendList.component.css';
+import axios from 'axios';
 
 
 export class friendList extends React.Component {
