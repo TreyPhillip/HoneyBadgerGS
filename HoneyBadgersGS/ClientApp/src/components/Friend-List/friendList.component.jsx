@@ -15,24 +15,24 @@ export class friendList extends React.Component {
             friendList: [],
             filteredAccounts: []
         };
-    }
+    }   
 
     //talks to the api in order to get the games from the database.
     componentDidMount() {
-        /*           axios.get("https://localhost:5001/api/accounts/getAccounts")
-                    .then(res => {
-                        const accounts = res.data;
-                        this.setState({ accounts });
-                    })*/
+        axios.get("https://localhost:5001/api/Accounts")
+            .then(res => {
+                const accounts = res.data;
+                this.setState({ accounts });
+            })
         var friends = [{ UserName: 'Jacob' }, { UserName: 'Sean' }];
         this.setState({ friendList: friends })
 
-        var users = [{ UserName: 'jim' }, { UserName: 'Alex' }, { UserName: 'Conor' }, { UserName: 'Peyton' }];
-        this.setState({ accounts: users })
+        /*        var users = [{ UserName: 'jim' }, { UserName: 'Alex' }, { UserName: 'Conor' }, { UserName: 'Peyton' }];
+                this.setState({ accounts: users })*/
 
         this.setState({
-            filteredAccounts: users
-        });        
+            filteredAccounts: this.state.accounts
+        });
     }
 
     componentWillReceiveProps(nextProps) {
@@ -107,17 +107,17 @@ export class friendList extends React.Component {
         else if (this.state.view === false) {
             return (
                 <div>
-                    <div>                       
-                            <button onClick={this.switch}>back</button>
-                            <input
+                    <div>
+                        <button onClick={this.switch}>back</button>
+                        <input
                             type="text"
                             className="input"
                             placeholder="search..."
                             onChange={this.handleChange}
-                            />
-                            <ul>
+                        />
+                        <ul>
 
-                            </ul>
+                        </ul>
                         <h1>users</h1> <br /> <br />
                         <div class="shopping-cart">
                             <div class="column-labels">
