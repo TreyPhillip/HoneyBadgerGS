@@ -6,9 +6,9 @@ namespace HoneyBadgers._0.BusinessLogic
     public interface IFriendListLogic
     {
         IEnumerable<FriendList> GetAll();
-        int Add(FriendList friendList);
-        int Update(FriendList friendList);
-        FriendList Details(int id);
-        int Delete(int id);
+        bool Add(FriendList friendList);
+        bool Update(FriendList friendList);
+        FriendList Details(string id);
+        int Delete(string id);
     }
 }

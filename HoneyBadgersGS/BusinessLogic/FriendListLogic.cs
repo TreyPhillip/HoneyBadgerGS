@@ -18,22 +18,22 @@ namespace HoneyBadgers._0.BusinessLogic
             return _friendListDal.GetAll();
         }
 
-        public int Add(FriendList friendList)
+        public bool Add(FriendList friendList)
         {
             return _friendListDal.Add(friendList);
         }
 
-        public int Update(FriendList friendList)
+        public bool Update(FriendList friendList)
         {
             return _friendListDal.Update(friendList);
         }
 
-        public FriendList Details(int id)
+        public FriendList Details(string id)
         {
             return _friendListDal.GetData(id);
         }
 
-        public int Delete(int id)
+        public int Delete(string id)
         {
             return _friendListDal.Delete(id);
         }

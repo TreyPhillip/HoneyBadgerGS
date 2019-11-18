@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { GameList } from './Game-List/gameList.component';
-import './home.css';
+import './Home.css';
 
 export class Home extends Component {
 
@@ -16,7 +16,6 @@ export class Home extends Component {
         fetch("https://localhost:5001/api/games/getGames")
             .then(response => response.json())
             .then(data => this.setState({ games: data }))
-            console.log(this.state.games);
     }
 
 
