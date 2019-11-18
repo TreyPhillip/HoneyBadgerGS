@@ -1,8 +1,8 @@
 ﻿import React, { Component } from 'react';
-import './home.css';
+import './Home.css';
 
 
-export class FriendList extends React.Component {
+export class friendList extends React.Component {
 
     constructor(props) {
         super(props);
