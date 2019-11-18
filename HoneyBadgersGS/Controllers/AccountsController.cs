@@ -20,9 +20,9 @@ namespace HoneyBadgers._0.Controllers
 
         // GET: api/Accounts
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Account>>> GetAccount()
+        public async Task<ActionResult<IEnumerable<AspNetUsers>>> GetAccount()
         {
-            return await _context.Account.ToListAsync();
+            return await _context.AspNetUsers.ToListAsync();
         }
 
         // GET: api/Accounts/5
