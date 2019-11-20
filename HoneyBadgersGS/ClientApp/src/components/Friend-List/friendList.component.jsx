@@ -2,6 +2,7 @@
 import axios from 'axios';
 
 import './friendList.component.css';
+import axios from 'axios';
 
 
 export class friendList extends React.Component {
