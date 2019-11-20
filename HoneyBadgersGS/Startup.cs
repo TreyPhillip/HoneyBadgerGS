@@ -63,10 +63,11 @@ namespace HoneyBadgers._0
 			//Friend List
 			services.AddTransient<IFriendListDal, FriendListDal>();
 			services.AddTransient<IFriendListLogic, FriendListLogic>();
-			//Account
-			//services.AddTransient<IAccountLogic, AccountLogic>();
-			
-			services.AddControllersWithViews();
+            //Account
+            services.AddTransient<IAccountDal, AccountDal>();
+            services.AddTransient<IAccountLogic, AccountLogic>();
+
+            services.AddControllersWithViews();
 			services.AddRazorPages();
 
 			// In production, the React files will be served from this directory

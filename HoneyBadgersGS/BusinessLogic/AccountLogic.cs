@@ -1,24 +1,40 @@
-﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using HoneyBadgers._0.DataLayers;
 using HoneyBadgers._0.Models;
 
 namespace HoneyBadgers._0.BusinessLogic
 {
-	public class AccountLogic : IAccountDal
-	{
-		private IAccountDal _accountDal;
+    public class AccountLogic : IAccountLogic
+    {
+        private IAccountDal _accountDal;
 
-		public AccountLogic(IAccountDal accountDal)
-		{
-			_accountDal = accountDal;
-		}
+        public AccountLogic(IAccountDal accountDal)
+        {
+            _accountDal = accountDal;
+        }
+        
+        public IEnumerable<AspNetUsers> GetAll()
+        {
+            return _accountDal.GetAll();
+        }
 
-		public IEnumerable<AspNetUsers> GetAll()
-		{
-			return _accountDal.GetAll();
-		}
-	}
+        public int Add(AspNetUsers account)
+        {
+            return _accountDal.Add(account);
+        }
+
+        public int Update(AspNetUsers account)
+        {
+            return _accountDal.Update(account);
+        }
+
+        public AspNetUsers Details(string id)
+        {
+            return _accountDal.GetData(id);
+        }
+        public int Delete(string id)
+        {
+            return _accountDal.Delete(id);
+        }
+    }
 }

@@ -1,4 +1,6 @@
 ﻿import React, { Component } from 'react';
+import axios from 'axios';
+
 import './friendList.component.css';
 
 
@@ -19,20 +21,21 @@ export class friendList extends React.Component {
 
     //talks to the api in order to get the games from the database.
     componentDidMount() {
-        axios.get("https://localhost:5001/api/Accounts")
+        axios.get("https://localhost:5001/api/Accounts/getaccounts")
             .then(res => {
                 const accounts = res.data;
                 this.setState({ accounts });
+                this.setState({ filteredAccounts: this.state.accounts });
+                console.log(res.data)
             })
+            .catch(error => {
+                    if (error.response) {
+                        console.log(error.response.data)
+                    }
+                })
+
         var friends = [{ UserName: 'Jacob' }, { UserName: 'Sean' }];
-        this.setState({ friendList: friends })
-
-        /*        var users = [{ UserName: 'jim' }, { UserName: 'Alex' }, { UserName: 'Conor' }, { UserName: 'Peyton' }];
-                this.setState({ accounts: users })*/
-
-        this.setState({
-            filteredAccounts: this.state.accounts
-        });
+        this.setState({ friendList: friends })     
     }
 
     componentWillReceiveProps(nextProps) {
@@ -73,17 +76,11 @@ export class friendList extends React.Component {
         if (this.state.view === true) {
             return (
                 <div>
-                    <div>
+                    <div>                       
+                        <h1>Friends List</h1>
                         <button onClick={this.switch}>Add Friend</button>
-                        <h1>Friends List</h1> <br /> <br />
-                        <div class="shopping-cart">
+                        <div class="frinds-list">
                             <div class="column-labels">
-                                <label class="product-image"></label>
-                                <label class="product-details"></label>
-                                <label class="product-price"></label>
-                                <label class="product-quantity"></label>
-                                <label class="product-removal"></label>
-                                <label class="product-line-price"></label>
                             </div>
                             {
                                 this.state.friendList.map((friend, i) => {
@@ -108,17 +105,17 @@ export class friendList extends React.Component {
             return (
                 <div>
                     <div>
-                        <button onClick={this.switch}>back</button>
+                        <h1>Add Friends</h1>
+                        <button onClick={this.switch}>Back</button>
                         <input
                             type="text"
                             className="input"
-                            placeholder="search..."
+                            placeholder="search users..."
                             onChange={this.handleChange}
                         />
                         <ul>
 
-                        </ul>
-                        <h1>users</h1> <br /> <br />
+                        </ul>                        
                         <div class="shopping-cart">
                             <div class="column-labels">
                                 <label class="product-image"></label>
@@ -134,9 +131,9 @@ export class friendList extends React.Component {
                                         <div>
                                             <div class="product">
                                                 <div class="product-details">
-                                                    <div class="product-title">{account.UserName} <button>add</button></div>
+                                                    <div class="product-title">{account.userName} <button>add</button></div>
                                                 </div>
-                                            </div>
+                                            </div>  
                                         </div>
                                     );
                                 })

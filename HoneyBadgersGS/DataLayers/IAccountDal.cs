@@ -1,14 +1,14 @@
-﻿using HoneyBadgers._0.Models;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using HoneyBadgers._0.Models;
 
 namespace HoneyBadgers._0.DataLayers
 {
-	public interface IAccountDal
-	{
-		IEnumerable<AspNetUsers> GetAll();
-	}
+    public interface IAccountDal
+    {
+         IEnumerable<AspNetUsers> GetAll();
+         int Add(AspNetUsers account);
+         int Update(AspNetUsers account);
+         AspNetUsers GetData(string id);
+         int Delete(string id);
+    }
 }
-
