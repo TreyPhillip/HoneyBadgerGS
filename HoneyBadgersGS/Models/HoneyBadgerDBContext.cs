@@ -20,7 +20,7 @@ namespace HoneyBadgers._0.Models
         public virtual DbSet<Cart> Cart { get; set; }
         public virtual DbSet<DeviceCodes> DeviceCodes { get; set; }
         public virtual DbSet<Event> Event { get; set; }
-        public virtual DbSet<FriendList> FriendList { get; set; }
+        public virtual DbSet<Friendship> Friendship { get; set; }
         public virtual DbSet<Game> Game { get; set; }
         public virtual DbSet<PersistedGrants> PersistedGrants { get; set; }
         public virtual DbSet<Profile> Profile { get; set; }
@@ -219,7 +219,8 @@ namespace HoneyBadgers._0.Models
                     .HasColumnName("eventID")
                     .ValueGeneratedNever();
 
-                entity.Property(e => e.AccountId).HasColumnName("accountID");
+                entity.Property(e => e.AccountId)
+                    .HasColumnName("accountID");
 
                 entity.Property(e => e.DateOfEvent)
                     .HasColumnName("dateOfEvent")
@@ -239,18 +240,16 @@ namespace HoneyBadgers._0.Models
                     .HasConstraintName("FK_Event_accountID");
             });
 
-            modelBuilder.Entity<FriendList>(entity =>
+            modelBuilder.Entity<Friendship>(entity =>
             {
-                entity.Property(e => e.FriendListId)
+                entity.Property(e => e.FriendshipId)
                     .HasColumnName("friendListID")
                     .ValueGeneratedNever();
 
-                entity.Property(e => e.AccountId).HasColumnName("accountID");
-
-                entity.HasOne(d => d.Account)
-                    .WithMany(p => p.FriendList)
-                    .HasForeignKey(d => d.AccountId)
-                    .HasConstraintName("FK_FriendList_accountID");
+                entity.Property(e => e.AccountId1)
+                    .HasColumnName("accountID1");
+                entity.Property(e => e.AccountId1)
+                    .HasColumnName("accountID2");
             });
 
             modelBuilder.Entity<Game>(entity =>
